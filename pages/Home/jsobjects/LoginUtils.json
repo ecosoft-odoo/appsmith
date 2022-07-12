@@ -1,0 +1,28 @@
+{
+  "unpublishedCollection": {
+    "name": "LoginUtils",
+    "pageId": "Home",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\todoo_url: \"128.199.141.217:8069\",\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t//write code here\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t},\n\tlogin: () => {\n\t\taction_login.run(() => {\n\t\t\tif (!action_login.data.error) {\n\t\t\t\tstoreValue('cookie',action_login.responseMeta[\"headers\"][\"Set-Cookie\"][0]);\n\t\t\t\tstoreValue('login_data',action_login.data.result);\n\t\t\t} else {\n\t\t\t\tshowAlert('Login failed!','error');\n\t\t\t\tstoreValue('cookie', false);\n\t\t\t\tstoreValue('login_data', false);\n\t\t\t}\n\t\t}, () => {})\n\t}\n}",
+    "variables": [
+      {
+        "name": "odoo_url",
+        "value": "\"128.199.141.217:8069\""
+      },
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  },
+  "id": "Home_LoginUtils",
+  "deleted": false,
+  "gitSyncId": "62ca92c23e597d31d94f79af_62ca97dc3e597d31d94f79c0"
+}

@@ -1,0 +1,44 @@
+{
+  "unpublishedCollection": {
+    "name": "ExpenseUtils",
+    "pageId": "My Expense",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\todoo_url: \"128.199.141.217:8069\",\n\tex_journal_id: 12, // expense journal, 12\n\tex_type: \"in_invoice\",\n\tex_account_id: 406,  // default expense account\n\tex_tax_id: 25, // undue included input vat\n\tex_uom_id: 1, // undue included input vat\n\tex_seq_code: \"appsmith.expense\",\n\n\tcreate_expense: async () => {\n\t\tawait get_next_number.run();\n\t\tawait create_expense_invoice.run();\n\t\tawait get_expense_invoice.run();\n\t\tawait closeModal(\"CreateExpenseModal\");\n\t},\n\t\n\tdelete_expense: async () => {\n\t\tawait delete_expense_invoice.run();\n\t\tawait get_expense_invoice.run();\n\t\tawait closeModal(\"DeleteExpenseModal\");\n\t},\n\t\n\t//myVar1: [],\n\t//myVar2: {},\n\t//myFun1: () => {\n\t\t//write code here\n\t//},\n\t//myFun2: async () => {\n\t\t//use async-await or promises\n\t//}\n\t//employees: async () => {\n\t//\tget_employee_contact.run()\n\t//}\n}",
+    "variables": [
+      {
+        "name": "odoo_url",
+        "value": "\"128.199.141.217:8069\""
+      },
+      {
+        "name": "ex_journal_id",
+        "value": "12"
+      },
+      {
+        "name": "ex_type",
+        "value": "\"in_invoice\""
+      },
+      {
+        "name": "ex_account_id",
+        "value": "406"
+      },
+      {
+        "name": "ex_tax_id",
+        "value": "25"
+      },
+      {
+        "name": "ex_uom_id",
+        "value": "1"
+      },
+      {
+        "name": "ex_seq_code",
+        "value": "\"appsmith.expense\""
+      }
+    ]
+  },
+  "id": "My Expense_ExpenseUtils",
+  "deleted": false,
+  "gitSyncId": "62ca92c23e597d31d94f79af_62caa3273e597d31d94f79d9"
+}
