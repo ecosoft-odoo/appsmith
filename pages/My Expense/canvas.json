@@ -4257,9 +4257,9 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
+                "ExpenseUtils.ex_journal_id",
                 "ExpenseUtils.odoo_url",
                 "appsmith.store.cookie",
-                "ExpenseUtils.ex_journal_id",
                 "appsmith.store.login_data.partner_id"
               ],
               "timeoutInMillisecond": 10000
